@@ -1,2 +1,2 @@
 # cpluplus
-Codigo de un curso de C++
+Ejercicios de C++ de diferentes niveles.
