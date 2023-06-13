@@ -14,6 +14,7 @@ int maximo();
 int minimo();
 void dibujarTriangulo(int base);
 void dibujarTrianguloIsoceles(int base);
+void dibujarRombo(int diagonal);
 
 int main()
 {
@@ -32,9 +33,51 @@ int main()
         cin >> base;
     }while(base%2 == 0);
 
-    dibujarTrianguloIsoceles(base);
+    dibujarRombo(base);
 
     return 0;
+}
+
+// Efectuar un programa que solicite al usuario que ingrese la diagonal de un rombo (validar que el valor ingresado sea impar). Luego deberá dibujar dicho rombo en la pantalla. Ejemplo:
+// Ingrese diagonal: 8
+// Valor incorrecto. Ingrese diagonal: 7
+void dibujarRombo(int diagonal)
+{
+    if(diagonal %2 == 0)
+    {
+        cout << "Ingrese un numero impar" << endl;
+        return;
+    }
+
+    for(int i = 0; i <= diagonal; i++)
+    {
+        for(int j=0 ; j <= diagonal-i-1; j++)
+        {
+             cout << ' ';
+        }  
+
+        for(int k=1 ; k <= 2*i+1; k++)
+        {
+             cout << '*';
+        }  
+         cout << endl;  
+    }
+
+
+    for(int i = diagonal; i >=0; i--)
+    {
+        for(int j=0 ; j <= diagonal-i-1; j++)
+        {
+             cout << ' ';
+        }  
+
+        for(int k=1 ; k <= 2*i+1; k++)
+        {
+             cout << '*';
+        }  
+         cout << endl;  
+    }
+
 }
 
 
@@ -68,8 +111,6 @@ void dibujarTrianguloIsoceles(int base)
 
          cout << endl;  
     }
-
-
 }
 
 
